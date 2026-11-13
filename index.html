@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Igreja Betel Jaguaribe | Um Lugar de Fé, Esperança e Amor</title>
+  
+  <meta name="description" content="Site oficial da Igreja Evangélica Betel no bairro de Jaguaribe, João Pessoa - PB. Venha nos visitar e participar dos nossos cultos, ministérios e momentos de oração." />
+  <meta name="keywords" content="Igreja Betel Jaguaribe, Betel João Pessoa, Cultos em Jaguaribe, Igreja Betel Brasileiro, Igreja Evangélica João Pessoa" />
+  <meta name="author" content="Igreja Betel Jaguaribe" />
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Igreja Betel Jaguaribe | João Pessoa - PB" />
+  <meta property="og:description" content="Venha fazer parte da nossa família. Cultos aos domingos às 09h e 18h, quartas às 19h30." />
+  <meta property="og:image" content="assets/logo.svg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.png" />
+
+  <!-- Google Fonts: Outfit e Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            betel: {
+              50: '#f0f4fd',
+              100: '#e1eafb',
+              500: '#1d4ed8',
+              800: '#0b1b3d',
+              900: '#071228',
+              950: '#040b19'
+            },
+            ouro: {
+              300: '#fde68a',
+              400: '#fcd34d',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Estilos Customizados -->
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased font-body flex flex-col min-h-screen">
+
+  <!-- =========================================================================
+       1. TOPO DE AVISOS / CONTATOS RÁPIDOS
+       ========================================================================= -->
+  <div class="bg-betel-950 text-slate-300 text-xs py-2 px-4 border-b border-white/10 hidden sm:block">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-ouro-400"></i>
+          Rua Eng. Leonardo Arcoverde, 145 — Jaguaribe, João Pessoa - PB
+        </span>
+        <span class="flex items-center gap-1.5 text-slate-300">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 text-ouro-400"></i>
+          Domingos às 09h e 18h • Quartas às 19h30
+        </span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a id="link-instagram-topo" href="https://www.instagram.com/beteljaguaribe/" target="_blank" rel="noopener" class="hover:text-ouro-300 transition-colors flex items-center gap-1">
+          <i data-lucide="instagram" class="w-3.5 h-3.5"></i> @beteljaguaribe
+        </a>
+        <button class="btn-abrir-oracao text-ouro-400 hover:text-ouro-300 font-semibold flex items-center gap-1 transition-colors">
+          <i data-lucide="heart" class="w-3.5 h-3.5"></i> Pedido de Oração
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. HEADER / NAVBAR (STICKY GLASSMORPHISM)
+       ========================================================================= -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+          <img src="assets/logo.png" alt="Igreja Betel Jaguaribe" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
+        </a>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-200">
+          <a href="#inicio" class="hover:text-ouro-400 transition-colors">Início</a>
+          <a href="#sobre" class="hover:text-ouro-400 transition-colors">Sobre Nós</a>
+          <a href="#cultos" class="hover:text-ouro-400 transition-colors">Cultos</a>
+          <a href="#ministerios" class="hover:text-ouro-400 transition-colors">Ministérios</a>
+          <a href="#mensagens" class="hover:text-ouro-400 transition-colors">Mensagens</a>
+          <a href="#eventos" class="hover:text-ouro-400 transition-colors">Eventos</a>
+          <a href="#dizimos" class="hover:text-ouro-400 transition-colors">Dízimos & PIX</a>
+          <a href="#como-chegar" class="hover:text-ouro-400 transition-colors">Como Chegar</a>
+        </nav>
+
+        <!-- Ações no Header -->
+        <div class="hidden md:flex items-center gap-3">
+          <button class="btn-abrir-oracao px-4 py-2 rounded-xl text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all flex items-center gap-2">
+            <i data-lucide="heart-handshake" class="w-4 h-4 text-ouro-400"></i> Pedir Oração
+          </button>
+
+          <a id="btn-topo-whatsapp" href="#" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-950 bg-gold-gradient hover:brightness-110 shadow-lg shadow-ouro-500/25 glow-gold transition-all flex items-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Fale Conosco
+          </a>
+        </div>
+
+        <!-- Botão Menu Mobile -->
+        <div class="flex lg:hidden items-center gap-2">
+          <button class="btn-abrir-oracao p-2 rounded-lg text-ouro-400 hover:bg-white/10" aria-label="Pedido de Oração">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+          </button>
+          <button id="btn-menu-mobile" class="p-2 rounded-lg text-slate-200 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Abrir menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Dropdown Menu Mobile -->
+    <div id="menu-mobile-dropdown" class="hidden lg:hidden bg-betel-950/95 border-b border-white/10 px-6 py-5 space-y-3 shadow-2xl backdrop-blur-xl">
+      <a href="#inicio" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Início</a>
+      <a href="#sobre" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Sobre Nós</a>
+      <a href="#cultos" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Horários dos Cultos</a>
+      <a href="#ministerios" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Ministérios</a>
+      <a href="#mensagens" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Mensagens & Sermões</a>
+      <a href="#eventos" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Eventos & Avisos</a>
+      <a href="#dizimos" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Dízimos & Ofertas</a>
+      <a href="#como-chegar" class="block py-2 text-slate-200 hover:text-ouro-400 font-medium">Como Chegar</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-2">
+        <button class="btn-abrir-oracao w-full py-2.5 rounded-xl text-center text-sm font-bold text-white bg-white/10 hover:bg-white/20">
+          Pedido de Oração
+        </button>
+        <a href="#como-chegar" class="w-full py-2.5 rounded-xl text-center text-sm font-bold text-slate-950 bg-gold-gradient">
+          Visite-nos neste Domingo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- =========================================================================
+         3. HERO SECTION
+         ========================================================================= -->
+    <section id="inicio" class="relative bg-betel-900 text-white min-h-[620px] lg:min-h-[700px] flex items-center overflow-hidden">
+      <!-- Imagem de fundo e sobreposição com gradiente rico -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1920&q=80" 
+          alt="Comunidade em adoração na Igreja Betel" 
+          class="w-full h-full object-cover object-center scale-105"
+        />
+        <div class="absolute inset-0 hero-overlay"></div>
+      </div>
+
+      <!-- Conteúdo do Hero -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Lado Esquerdo: Mensagem Principal -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-ouro-300 text-xs sm:text-sm font-semibold tracking-wide">
+              <span class="w-2 h-2 rounded-full bg-ouro-400 animate-ping"></span>
+              Igreja Evangélica em Jaguaribe, João Pessoa
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+              Um lugar de fé viva, <br class="hidden sm:inline" />
+              <span class="text-gold-gradient">amor e comunhão</span> para toda a família.
+            </h1>
+
+            <p id="hero-subtitulo" class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+              Venha fazer parte de uma comunidade que ama a Palavra de Deus, cuida das pessoas e proclama a esperança em Jesus Cristo.
+            </p>
+
+            <!-- Versículo em Destaque -->
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm max-w-xl">
+              <p id="hero-versiculo-texto" class="text-sm italic text-slate-200">
+                "Porque onde estiverem dois ou três reunidos em meu nome, aí estou eu no meio deles."
+              </p>
+              <p id="hero-versiculo-ref" class="text-xs font-bold text-ouro-400 mt-1">
+                — Mateus 18:20
+              </p>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#cultos" class="px-7 py-3.5 rounded-2xl text-sm font-bold text-slate-950 bg-gold-gradient hover:brightness-110 shadow-xl shadow-ouro-500/20 glow-gold transition-all flex items-center gap-2">
+                <i data-lucide="calendar" class="w-4 h-4"></i> Conhecer Cultos
+              </a>
+              <a href="#como-chegar" class="px-7 py-3.5 rounded-2xl text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-ouro-400"></i> Como Chegar
+              </a>
+              <button class="btn-abrir-oracao px-6 py-3.5 rounded-2xl text-sm font-bold text-ouro-300 hover:text-ouro-200 transition-colors flex items-center gap-2">
+                <i data-lucide="heart" class="w-4 h-4"></i> Pedir Oração
+              </button>
+            </div>
+          </div>
+
+          <!-- Lado Direito: Card Dinâmico do Próximo Culto -->
+          <div class="lg:col-span-5">
+            <div class="glass-card-dark rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20 backdrop-blur-xl relative overflow-hidden">
+              <div class="absolute -right-8 -top-8 w-36 h-36 bg-ouro-500/10 rounded-full blur-2xl"></div>
+              
+              <div id="card-proximo-culto" class="space-y-4">
+                <!-- Preenchido dinamicamente pelo JavaScript (app.js) -->
+                <div class="animate-pulse space-y-3">
+                  <div class="h-4 bg-white/20 rounded w-1/3"></div>
+                  <div class="h-6 bg-white/30 rounded w-3/4"></div>
+                  <div class="h-12 bg-white/10 rounded"></div>
+                </div>
+              </div>
+
+              <!-- Atalhos do Card -->
+              <div class="mt-6 pt-5 border-t border-white/10 flex items-center justify-between">
+                <a href="#cultos" class="text-xs text-ouro-300 hover:text-ouro-200 font-semibold flex items-center gap-1">
+                  Ver programação semanal completa &rarr;
+                </a>
+                <span class="text-[11px] text-slate-400">Entrada franca</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. BARRA DE PILARES & VALORES RÁPIDOS
+         ========================================================================= -->
+    <section class="bg-white border-b border-slate-200/80 py-8 relative -mt-4 z-20 rounded-t-3xl shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+          
+          <div class="flex flex-col md:flex-row items-center gap-3.5 p-3">
+            <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center shrink-0">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Palavra Bíblica</h4>
+              <p class="text-xs text-slate-500">Ensino fiel das Escrituras</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-3.5 p-3">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Comunhão & Família</h4>
+              <p class="text-xs text-slate-500">Acolhimento para todas as idades</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-3.5 p-3">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+              <i data-lucide="flame" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Oração Constante</h4>
+              <p class="text-xs text-slate-500">Intercessão que move os céus</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center gap-3.5 p-3">
+            <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center shrink-0">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Missões & Serviço</h4>
+              <p class="text-xs text-slate-500">Impactando Jaguaribe e o mundo</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SOBRE A IGREJA (HISTÓRIA, MISSÃO E VISÃO)
+         ========================================================================= -->
+    <section id="sobre" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Imagem e Destaques Visuais -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <img 
+                src="https://images.unsplash.com/photo-1543702404-5e88414407b7?auto=format&fit=crop&w=800&q=80" 
+                alt="Igreja Betel Jaguaribe" 
+                class="w-full h-[420px] object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-betel-950/80 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="text-xs uppercase font-bold tracking-widest text-ouro-400">Jaguaribe • João Pessoa</span>
+                <h3 class="text-xl font-bold mt-1">Igreja Missionária Evangélica Betel Brasileiro</h3>
+                <p class="text-xs text-slate-300 mt-1">Edificados na Palavra e comprometidos com a verdade.</p>
+              </div>
+            </div>
+
+            <!-- Card Sobreposto Flutuante -->
+            <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 hidden sm:flex items-center gap-3 max-w-xs">
+              <div class="w-12 h-12 rounded-xl bg-ouro-500/10 text-ouro-600 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block font-medium">Desde a nossa fundação</span>
+                <span class="text-sm font-bold text-slate-900">Servindo a Deus e abençoando famílias</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Texto Institucional e Valores -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-betel-500 bg-blue-50 px-3 py-1 rounded-full">Quem Somos</span>
+              <h2 id="sobre-titulo" class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+                Bem-vindo à Família Betel Jaguaribe
+              </h2>
+            </div>
+
+            <p id="sobre-mensagem" class="text-slate-600 text-base leading-relaxed">
+              A congregação da Igreja Betel no bairro de Jaguaribe é um ponto de encontro com a graça salvadora de Cristo. Nosso foco é acolher cada visitante como parte de nossa família espiritual, promovendo o crescimento na fé através do estudo sério da Bíblia, da oração e do serviço generoso ao próximo.
+            </p>
+
+            <!-- Missão & Visão (Tabs/Cards) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                <div class="flex items-center gap-2.5 text-blue-900 font-bold mb-2">
+                  <i data-lucide="compass" class="w-5 h-5 text-ouro-500"></i>
+                  <span>Nossa Missão</span>
+                </div>
+                <p id="sobre-missao" class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Pregar o Evangelho pleno de Cristo, acolher e discipular pessoas para que vivam com maturidade cristã e propósito eterno.
+                </p>
+              </div>
+
+              <div class="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                <div class="flex items-center gap-2.5 text-blue-900 font-bold mb-2">
+                  <i data-lucide="eye" class="w-5 h-5 text-ouro-500"></i>
+                  <span>Nossa Visão</span>
+                </div>
+                <p id="sobre-visao" class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Ser uma igreja referência em ensino bíblico, comunhão sincera e transformação social no bairro de Jaguaribe e em toda a Paraíba.
+                </p>
+              </div>
+            </div>
+
+            <!-- Nossos 4 Valores Principais -->
+            <div class="pt-2">
+              <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3">Nossos Princípios Fundamentais</h4>
+              <div id="sobre-valores-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <!-- Preenchido via app.js -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. PROGRAMAÇÃO SEMANAL DE CULTOS
+         ========================================================================= -->
+    <section id="cultos" class="py-20 bg-white border-y border-slate-200/80 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-ouro-600 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200/60">
+            Nossos Horários
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Cultos & Reuniões da Semana
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Venha celebrar e aprender da Palavra de Deus conosco. Há um lugar especial preparado para você e seus filhos!
+          </p>
+        </div>
+
+        <!-- Grid de Cultos Dinâmico -->
+        <div id="container-cultos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Preenchido via app.js -->
+        </div>
+
+        <!-- Banner de acolhimento para visitantes -->
+        <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-betel-50 border border-blue-200/70 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4 text-center sm:text-left">
+            <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center shrink-0 mx-auto sm:mx-0 shadow-md">
+              <i data-lucide="sparkle" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-base sm:text-lg">É a sua primeira vez nos visitando?</h4>
+              <p class="text-slate-600 text-xs sm:text-sm">
+                Nossa equipe de recepção está pronta para lhe apresentar a igreja e encaminhar seus filhos para o Betel Kids!
+              </p>
+            </div>
+          </div>
+          <a href="#como-chegar" class="px-6 py-3 rounded-xl text-xs font-bold text-white bg-betel-800 hover:bg-betel-900 transition-colors shrink-0">
+            Ver Localização & Como Chegar
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. MINISTÉRIOS & DEPARTAMENTOS
+         ========================================================================= -->
+    <section id="ministerios" class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-betel-500 bg-blue-50 px-3.5 py-1.5 rounded-full">
+            Serviço & Integração
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Ministérios para Toda a Família
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Da infância à terceira idade, descubra onde você e sua família podem servir, crescer e construir amizades para a vida inteira.
+          </p>
+        </div>
+
+        <!-- Grid dos Ministérios Dinâmico -->
+        <div id="container-ministerios" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Preenchido via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. MENSAGENS, SERMÕES & TRANSMISSÕES
+         ========================================================================= -->
+    <section id="mensagens" class="py-20 bg-betel-950 text-white relative overflow-hidden">
+      <!-- Decorações de fundo sutis -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-ouro-500/10 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-ouro-400 bg-white/10 px-3.5 py-1.5 rounded-full backdrop-blur-sm">
+              Alimento Espiritual
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 tracking-tight">
+              Mensagens & Sermões Recentes
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base mt-2">
+              Acompanhe as pregações bíblicas ministradas no púlpito da Betel Jaguaribe.
+            </p>
+          </div>
+
+          <a id="btn-canal-youtube" href="#" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-red-600 hover:bg-red-700 transition-colors flex items-center gap-2 self-start md:self-auto shadow-lg shadow-red-600/30">
+            <i data-lucide="youtube" class="w-4 h-4"></i> Inscreva-se no Canal do YouTube
+          </a>
+        </div>
+
+        <!-- Área de Vídeo em Destaque + Lista Lateral -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Vídeo Principal -->
+          <div class="lg:col-span-7 bg-slate-900 rounded-3xl overflow-hidden border border-white/15 shadow-2xl">
+            <div class="relative aspect-video w-full bg-black">
+              <iframe 
+                id="iframe-youtube-player"
+                class="w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/ysz5S6PUM-U" 
+                title="Sermão Betel Jaguaribe" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-2">
+                <span id="sermao-destaque-serie" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-ouro-500/20 text-ouro-300">
+                  Série Edificados
+                </span>
+                <span id="sermao-destaque-data" class="text-xs text-slate-400">Último Culto</span>
+              </div>
+              <h3 id="sermao-destaque-titulo" class="text-xl font-bold text-white mb-2">
+                Firmados na Rocha: A Segurança de Quem Confia em Deus
+              </h3>
+              <p id="sermao-destaque-resumo" class="text-slate-300 text-sm leading-relaxed mb-4">
+                Uma mensagem inspiradora sobre como permanecer inabalável diante dos desafios diários, alicerçado na graça do Senhor.
+              </p>
+              <div class="flex items-center gap-2 text-xs text-ouro-300 font-medium">
+                <i data-lucide="user" class="w-4 h-4"></i>
+                <span id="sermao-destaque-pregador">Ministério Pastoral</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lista de Outros Sermões -->
+          <div class="lg:col-span-5 space-y-4">
+            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+              <i data-lucide="list-video" class="w-4 h-4 text-ouro-400"></i> Outras Mensagens
+            </h4>
+            
+            <div id="lista-outros-sermoes" class="space-y-3">
+              <!-- Preenchido via app.js -->
+            </div>
+
+            <!-- Card de Transmissão ao Vivo -->
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-blue-900/40 to-slate-900 border border-blue-500/30 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-ouro-500/20 text-ouro-400 flex items-center justify-center shrink-0">
+                <i data-lucide="radio" class="w-6 h-6 animate-pulse"></i>
+              </div>
+              <div>
+                <h5 class="text-sm font-bold text-white">Transmissão aos Domingos</h5>
+                <p class="text-xs text-slate-300">Não pôde vir presencialmente? Assista ao vivo pelo nosso YouTube a partir das 18h.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. PRÓXIMOS EVENTOS & AVISOS
+         ========================================================================= -->
+    <section id="eventos" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-ouro-600 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200">
+            Fique por Dentro
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Próximos Eventos & Avisos
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Marque na sua agenda e participe das nossas programações especiais, retiros e encontros de comunhão.
+          </p>
+        </div>
+
+        <div id="container-eventos" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Preenchido via app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. DÍZIMOS, OFERTAS & MISSÕES (COM BOTÃO COPIAR PIX)
+         ========================================================================= -->
+    <section id="dizimos" class="py-20 bg-slate-50 border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Texto Explicativo Bíblico -->
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-ouro-600 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200">
+              Generosidade & Missões
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Dízimos, Ofertas & Sustento da Obra
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Sua contribuição voluntária e fiel sustenta a pregação do Evangelho em Jaguaribe, apoia famílias em vulnerabilidade através da ação social e mantém missionários no campo.
+            </p>
+
+            <blockquote class="p-5 rounded-2xl bg-white border-l-4 border-ouro-500 shadow-sm">
+              <p id="pix-versiculo" class="text-slate-700 italic text-sm">
+                "Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama a quem dá com alegria."
+              </p>
+              <footer id="pix-versiculo-ref" class="text-xs font-bold text-ouro-600 mt-2">
+                — 2 Coríntios 9:7
+              </footer>
+            </blockquote>
+
+            <div class="space-y-3 pt-2 text-xs sm:text-sm text-slate-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Manutenção do templo e acolhimento comunitário
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Suporte a missionários e projetos transculturais
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Ação Social: Cestas de alimentos para famílias de João Pessoa
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Interativo de PIX e Dados Bancários -->
+          <div class="lg:col-span-6">
+            <div class="bg-white rounded-3xl p-7 sm:p-9 shadow-xl border border-slate-200/90 relative overflow-hidden">
+              <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-bold text-slate-900 text-lg">Contribuição via PIX</h3>
+                    <p class="text-xs text-slate-500">Rápido, seguro e sem tarifas bancárias</p>
+                  </div>
+                </div>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">
+                  PIX Ativo
+                </span>
+              </div>
+
+              <!-- Chave PIX com Botão de Cópia em 1 Clique -->
+              <div class="my-6">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">
+                  Chave PIX da Igreja:
+                </label>
+                <div class="flex items-center gap-2 p-2 rounded-2xl bg-slate-100 border border-slate-200">
+                  <span id="pix-chave-texto" class="px-3 text-sm sm:text-base font-mono font-bold text-slate-800 flex-1 truncate select-all">
+                    igrejabeteljaguaribe@email.com
+                  </span>
+                  <button 
+                    id="btn-copiar-pix" 
+                    type="button"
+                    class="px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors flex items-center gap-1.5 shrink-0 shadow-md shadow-emerald-600/20 active:scale-95"
+                  >
+                    <i data-lucide="copy" class="w-4 h-4"></i> Copiar Chave
+                  </button>
+                </div>
+              </div>
+
+              <!-- Detalhes do Titular e Conta Bancária -->
+              <div class="space-y-3 pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-600">
+                <div class="flex justify-between py-1 border-b border-slate-50">
+                  <span class="text-slate-400">Favorecido:</span>
+                  <span id="pix-titular" class="font-bold text-slate-800 text-right">Igreja Evangélica Betel Brasileiro Jaguaribe</span>
+                </div>
+                <div class="flex justify-between py-1 border-b border-slate-50">
+                  <span class="text-slate-400">Banco:</span>
+                  <span id="pix-banco" class="font-medium text-slate-800">Banco do Brasil / Caixa</span>
+                </div>
+                <div class="flex justify-between py-1">
+                  <span class="text-slate-400">Agência & Conta:</span>
+                  <span id="pix-agencia-conta" class="font-medium text-slate-800">Agência: 1234-5 • Conta: 98765-4</span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 text-center">
+                <p class="text-[11px] text-slate-400">
+                  Deus abençoe a sua fidelidade e generosidade! Se desejar comprovante para o departamento contábil, envie pelo WhatsApp da secretaria.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. LOCALIZAÇÃO, MAPA & COMO CHEGAR
+         ========================================================================= -->
+    <section id="como-chegar" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-betel-500 bg-blue-50 px-3.5 py-1.5 rounded-full">
+            Venha nos Visitar
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Localização & Como Chegar
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Estamos situados no tradicional bairro de Jaguaribe, com fácil acesso e estacionamento nas imediações.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Card de Informações e Botões de GPS -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-betel-900 to-betel-950 text-white rounded-3xl p-7 sm:p-9 shadow-xl flex flex-col justify-between">
+            <div class="space-y-6">
+              <div class="w-14 h-14 rounded-2xl bg-ouro-500/20 text-ouro-400 flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-7 h-7"></i>
+              </div>
+
+              <div>
+                <span class="text-xs uppercase font-bold tracking-widest text-ouro-300">Endereço da Igreja</span>
+                <h3 id="contato-endereco-completo" class="text-xl sm:text-2xl font-bold text-white mt-1">
+                  Rua Engenheiro Leonardo Arcoverde, 145 — Jaguaribe, João Pessoa - PB
+                </h3>
+                <p id="contato-referencia" class="text-sm text-slate-300 mt-2 flex items-center gap-2">
+                  <i data-lucide="info" class="w-4 h-4 text-ouro-400 shrink-0"></i>
+                  Ponto de referência: Próximo ao Hemocentro da Paraíba.
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-4 border-t border-white/10 text-xs sm:text-sm text-slate-200">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="clock" class="w-4 h-4 text-ouro-400"></i>
+                  <span>Culto da Família aos Domingos às 18:00</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="phone" class="w-4 h-4 text-ouro-400"></i>
+                  <span>WhatsApp de atendimento aos membros e visitantes</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i data-lucide="instagram" class="w-4 h-4 text-ouro-400"></i>
+                  <span id="texto-instagram-user">@beteljaguaribe</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botões de GPS (Google Maps e Waze) -->
+            <div class="pt-8 space-y-3">
+              <a 
+                id="link-abrir-gmaps" 
+                href="#" 
+                target="_blank" 
+                rel="noopener" 
+                class="w-full py-3.5 px-4 rounded-xl text-center text-xs font-bold text-slate-950 bg-gold-gradient hover:brightness-110 shadow-lg glow-gold transition-all flex items-center justify-center gap-2"
+              >
+                <i data-lucide="navigation" class="w-4 h-4"></i> Abrir no Google Maps
+              </a>
+
+              <a 
+                id="link-whatsapp-direto" 
+                href="#" 
+                target="_blank" 
+                rel="noopener" 
+                class="w-full py-3.5 px-4 rounded-xl text-center text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 shadow-md"
+              >
+                <i data-lucide="message-circle" class="w-4 h-4"></i> Conversar pelo WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Mapa Interativo do Google Maps -->
+          <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-xl border border-slate-200 min-h-[380px] lg:min-h-full">
+            <iframe 
+              id="iframe-google-maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.946399434865!2d-34.88720082419409!3d-7.132213792871895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ace816b3fcf8ad%3A0xe5a3637db7f66a2!2sR.%20Eng.%20Leonardo%20Arcoverde%2C%20145%20-%20Jaguaribe%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058015-660!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+              class="w-full h-full min-h-[420px]" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       12. RODAPÉ (FOOTER)
+       ========================================================================= -->
+  <footer class="bg-betel-950 text-slate-400 text-sm border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Coluna 1: Sobre & Logo -->
+        <div class="space-y-4">
+          <img src="assets/logo.svg" alt="Igreja Betel Jaguaribe" class="h-12 w-auto" />
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Uma congregação cristã fundamentada nas Sagradas Escrituras, comprometida com a pregação bíblica, a acolhida familiar e a transformação de vidas em Jaguaribe e João Pessoa.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/beteljaguaribe/" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-ouro-500 hover:text-slate-950 text-white flex items-center justify-center transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=Igreja+Betel+Jaguaribe" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-ouro-500 hover:text-slate-950 text-white flex items-center justify-center transition-colors" aria-label="YouTube">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <button class="btn-abrir-oracao w-9 h-9 rounded-full bg-white/10 hover:bg-ouro-500 hover:text-slate-950 text-white flex items-center justify-center transition-colors" aria-label="Pedido de Oração">
+              <i data-lucide="heart" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Links Rápidos -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navegação</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#inicio" class="hover:text-ouro-300 transition-colors">Início</a></li>
+            <li><a href="#sobre" class="hover:text-ouro-300 transition-colors">Sobre Nós & Mensagem Pastoral</a></li>
+            <li><a href="#cultos" class="hover:text-ouro-300 transition-colors">Horários dos Cultos</a></li>
+            <li><a href="#ministerios" class="hover:text-ouro-300 transition-colors">Ministérios (Infantil, Jovens, Louvor)</a></li>
+            <li><a href="#mensagens" class="hover:text-ouro-300 transition-colors">Pregações & Sermões</a></li>
+            <li><a href="#eventos" class="hover:text-ouro-300 transition-colors">Avisos e Eventos</a></li>
+            <li><a href="#dizimos" class="hover:text-ouro-300 transition-colors">Dízimos e Ofertas (PIX)</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Horários Resumidos -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Cultos Semanais</h4>
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-bold text-ouro-300 block">Domingo • 09:00</span>
+              <span class="text-slate-300">Escola Bíblica Dominical (EBD)</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-bold text-ouro-300 block">Domingo • 18:00</span>
+              <span class="text-slate-300">Culto de Celebração e Família</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/5 border border-white/5">
+              <span class="font-bold text-ouro-300 block">Quarta-feira • 19:30</span>
+              <span class="text-slate-300">Culto de Oração e Estudo Bíblico</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Contato & Facilidade de Edição -->
+        <div class="space-y-4">
+          <h4 class="text-white font-bold text-sm uppercase tracking-wider">Contato & Localização</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Rua Engenheiro Leonardo Arcoverde, 145<br />
+            Bairro Jaguaribe — João Pessoa / PB<br />
+            CEP 58015-660
+          </p>
+
+          <div class="pt-2 border-t border-white/10">
+            <!-- Botão do Editor Fácil de Conteúdo -->
+            <button 
+              id="btn-abrir-editor-rapido"
+              type="button" 
+              class="w-full py-2.5 px-3 rounded-xl text-xs font-semibold text-slate-300 bg-white/5 hover:bg-white/10 hover:text-white border border-white/10 transition-colors flex items-center justify-center gap-2"
+            >
+              <i data-lucide="sliders" class="w-3.5 h-3.5 text-ouro-400"></i> Editor Rápido do Site
+            </button>
+            <p class="text-[10px] text-slate-500 mt-1 text-center">Permite alterar textos e baixar o novo conteudo.js</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Linha final de Direitos e Manutenção -->
+      <div class="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 Igreja Missionária Evangélica Betel Brasileiro — Jaguaribe. Todos os direitos reservados.</p>
+        <p class="flex items-center gap-1">
+          Feito com <i data-lucide="heart" class="w-3.5 h-3.5 text-red-500 fill-current"></i> para a glória de Deus
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       13. MODAIS (PEDIDO DE ORAÇÃO & EDITOR RÁPIDO)
+       ========================================================================= -->
+  
+  <!-- Modal 1: Pedido de Oração -->
+  <div id="modal-pedido-oracao" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+      <button id="btn-fechar-modal-oracao" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center">
+          <i data-lucide="heart" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl text-slate-900">Pedido de Oração</h3>
+          <p class="text-xs text-slate-500">Nossa equipe de intercessores estará orando por você</p>
+        </div>
+      </div>
+
+      <form id="form-pedido-oracao" class="space-y-4 text-sm">
+        <div>
+          <label class="block font-semibold text-slate-700 text-xs mb-1">Seu Nome (Opcional):</label>
+          <input id="oracao-nome" type="text" placeholder="Ex: Maria / Anônimo" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-betel-500 text-sm" />
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 text-xs mb-1">Motivo Principal:</label>
+          <select id="oracao-motivo" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-betel-500 text-sm bg-white">
+            <option value="Família">Pela Minha Família</option>
+            <option value="Saúde e Cura">Saúde / Cura de Enfermidade</option>
+            <option value="Emprego e Finanças">Área Profissional / Finanças</option>
+            <option value="Crescimento Espiritual">Crescimento Espiritual / Paz</option>
+            <option value="Agradecimento">Agradecimento por Bênção Alcançada</option>
+            <option value="Outro Motivo">Outro Motivo Especial</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 text-xs mb-1">Detalhe o seu pedido:</label>
+          <textarea id="oracao-mensagem" rows="3" required placeholder="Escreva como podemos orar por você..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-betel-500 text-sm"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2">
+          <i data-lucide="send" class="w-4 h-4"></i> Enviar Pedido via WhatsApp Pastoral
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Editor Rápido de Conteúdo (Ferramenta de Manutenção para Leigos) -->
+  <div id="modal-editor-rapido" class="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button id="btn-fechar-editor" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-ouro-600 flex items-center justify-center">
+          <i data-lucide="sliders" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl text-slate-900">Painel de Edição Rápida</h3>
+          <p class="text-xs text-slate-500">Altere textos com facilidade e gere um novo <code>conteudo.js</code></p>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm">
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 text-xs leading-relaxed">
+          💡 <strong>Como funciona a manutenção do site:</strong> Você pode editar diretamente o arquivo <code>conteudo.js</code> no Bloco de Notas, ou alterar os campos abaixo e clicar em <strong>"Baixar Novo conteudo.js"</strong> para substituir o arquivo na pasta do site!
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Slogan Principal (Hero):</label>
+          <input id="edit-slogan" type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs sm:text-sm" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Subtítulo de Boas-Vindas:</label>
+          <input id="edit-subtitulo" type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs sm:text-sm" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Chave PIX da Igreja:</label>
+          <input id="edit-chave-pix" type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs sm:text-sm font-mono" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">WhatsApp de Atendimento (Somente números com DDD):</label>
+          <input id="edit-whatsapp" type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs sm:text-sm" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Endereço em Jaguaribe:</label>
+          <input id="edit-endereco" type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs sm:text-sm" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Instagram Link:</label>
+          <input id="edit-instagram" type="text" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs sm:text-sm" />
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-3">
+          <button id="btn-baixar-novo-conteudo" type="button" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs sm:text-sm text-white bg-betel-800 hover:bg-betel-900 transition-colors flex items-center justify-center gap-2">
+            <i data-lucide="download" class="w-4 h-4"></i> Baixar Novo conteudo.js
+          </button>
+          <button id="btn-copiar-novo-conteudo" type="button" class="py-3 px-4 rounded-xl font-bold text-xs sm:text-sm text-slate-800 bg-slate-100 hover:bg-slate-200 transition-colors flex items-center justify-center gap-2">
+            <i data-lucide="copy" class="w-4 h-4"></i> Copiar Código
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificação Instantâneo -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-3 hidden">
+    <div class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <span id="toast-texto" class="text-xs sm:text-sm font-semibold">Chave PIX copiada com sucesso!</span>
+  </div>
+
+  <!-- Scripts: 1. Configurações & Textos -> 2. Aplicação -->
+  <script src="conteudo.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
